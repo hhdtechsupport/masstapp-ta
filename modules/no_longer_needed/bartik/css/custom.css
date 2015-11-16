@@ -1,0 +1,115 @@
+/* Custom styles for the Bartik theme */
+
+@font-face {
+    font-family: 'akzidenzgroteskregular';
+    src: url('akzidenz-grotesk-bold-webfont.eot');
+    src: url('akzidenz-grotesk-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('akzidenz-grotesk-bold-webfont.woff') format('woff'),
+         url('akzidenz-grotesk-bold-webfont.ttf') format('truetype'),
+         url('akzidenz-grotesk-bold-webfont.svg#akzidenzgroteskregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+#weekly-report-node-form table {
+	width: 100%;
+}
+
+.masstapp-checkbox-table input[type="text"] {
+	width: 50px;
+}
+
+.field .field-label {
+	font-family: 'akzidenzgroteskregular',arial,sans-serif;
+	font-weight: 100;
+}
+
+/* All elements, ids and classes that use the EDC font go here */
+
+h1, h2, h3, h4, h5, #site-name, #site-slogan, ul#secondary-menu-links li a {
+	font-family: 'akzidenzgroteskregular', arial, sans-serif;
+}
+
+/* Hiding the input format */
+
+.filter-wrapper {
+	display: none;
+}
+
+/* User menu styling */
+
+ul#secondary-menu-links {
+	position: absolute;
+	top:89px;
+	right: 0;
+}
+
+ul#secondary-menu-links li {
+	background: none repeat scroll 0 0 white;
+    border-radius: 5px 5px 0 0;
+    display: inline;
+    list-style-type: none;
+    padding: 4px 10px;
+}
+
+ul#secondary-menu-links li a {
+	font-size: 0.9em;
+	color: darkslategray;
+}
+
+/* #site-slogan and #site-name styling */
+
+body #site-slogan {
+	line-height: 1;
+}
+
+#name-and-slogan {
+	/* This is the container for the #site-name and #site-slogan divs */
+	float: right;
+	padding-top: 25px;
+}
+
+#site-slogan, #site-name {
+	font-size: 1.8em;
+    font-style: normal;
+    margin-top: 0;
+    word-spacing: 0.2em;
+    float:left;
+    padding: 4px 14px;
+}
+
+#site-name {
+	border-right: 1px solid #fff;
+}
+
+#site-name a {
+	padding: 0;
+	margin: 0;
+}
+
+.node-weekly-report .field, .node-event .field {
+    margin:10px 0px;
+}
+
+/* Form stuff */
+.filter-wrapper {
+	display: none;
+}
+
+.bef-checkboxes label {font-weight: normal;}
+
+#edit-field-spf-step2-value-wrapper {clear:both;}
+
+/* Weekly Report Form and Event Form */
+/*
+
+#edit-field-who-provided-services-und {
+	margin-top:10px;
+}
+#edit-field-who-provided-services-und div.form-type-checkbox {
+	display: inline;
+	padding: 10px;
+	background: #ccc;
+}
+*/

@@ -1,0 +1,264 @@
+
+/* ---------- Overall Specifications ---------- */
+
+body {
+  font-family: Verdana, Geneva, Tahoma, Arial, sans-serif;
+  font-size: 100%;
+}
+
+#header a,
+#header {
+  color: #000000 !important;
+}
+
+#header .section {
+  background-color: #eeeeff;
+}
+
+#footer-wrapper {
+  color: #444499;
+}
+
+#footer-wrapper a {
+  color: #217adf;
+}
+
+#footer-wrapper .block {
+  border: 0px;
+}
+
+#main-menu {
+  background-color: #227bdf;
+  /*padding-top: 3px;*/
+}
+
+#main-menu ul li {
+  padding: 4px 6px 0 6px !important;
+}
+
+#main-menu ul li a {
+  background-color: #444499 !important;
+  color: #f4f4ff !important;
+}
+
+#main-menu ul li a.active-trail {
+  background-color: #f4f4ff !important;
+  color: #444499 !important;
+}
+
+#main-menu ul li a:hover {
+  background-color: #ffffff !important;
+  color: #227bdf !important;
+}
+
+.node {
+  background-color: inherit;
+  font-size: 1.0em !important;
+}
+
+fieldset legend {
+  background: #e4f5fc; /* Old browsers */
+  background: -moz-linear-gradient(top, #e4f5fc 0%, #bfe8f9 50%, #9fd8ef 51%, #2ab0ed 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#e4f5fc), color-stop(50%,#bfe8f9), color-stop(51%,#9fd8ef), color-stop(100%,#2ab0ed)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, #e4f5fc 0%,#bfe8f9 50%,#9fd8ef 51%,#2ab0ed 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, #e4f5fc 0%,#bfe8f9 50%,#9fd8ef 51%,#2ab0ed 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, #e4f5fc 0%,#bfe8f9 50%,#9fd8ef 51%,#2ab0ed 100%); /* IE10+ */
+  background: linear-gradient(to bottom, #e4f5fc 0%,#bfe8f9 50%,#9fd8ef 51%,#2ab0ed 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e4f5fc', endColorstr='#2ab0ed',GradientType=0 ); /* IE6-9 */
+}
+
+.address-details {
+  font-size: 89%;
+  width: 195%;
+}
+
+.front .node-readmore {
+  display: none;
+}
+
+.node-event .group-right,
+.node-event .group-left {
+  border: 1px solid #cccccc;
+  border-radius: 9px;
+  margin-bottom: 1em;
+  padding: 6px;
+  width: 48%;
+}
+
+.node-event .group-leftt {
+  margin-right: 1%;
+}
+
+#weekly-report-node-form #edit-field-week .chosen-container {
+  width: 150px !important;
+}
+
+.node-weekly-report fieldset {
+  clear: both;
+}
+
+.node .content,
+.node-weekly-report .content {
+  font-size: 1.0em !important;
+}
+
+.node-weekly-report .node h2 {
+  font-size: 1.0em !important;
+  font-weight: bold;
+}
+
+.node-weekly-report .field-name-field-program-served .field-item.even .node-program {
+  background-color: #eeffee;
+}
+
+.node-weekly-report .node-program .field {
+  margin-right: 1em;
+}
+
+.chosen-container-single .chosen-single {
+  background: rgba(0, 0, 0, 0) -moz-linear-gradient(center top , #ffffff 20%, #c0e0ff 50%, #eeeeee 52%, #c0e0ff 100%) repeat scroll 0 0 padding-box
+}
+
+.views-table tr.odd td,
+tr.ief-row-entity.odd {
+  background-color: #ddeeff !important;
+}
+
+.views-table tr.even td,
+tr.ief-row-entity.even {
+  background-color: #eeffee !important;
+}
+
+.ief-entity-operations input.form-submit {
+  border-radius: 12px;
+  margin-bottom: 6px;
+  margin-right: 2px;
+  padding: 1px 6px;
+}
+
+input.form-submit[value="Apply"],
+.ief-entity-operations input.form-submit[value="Edit"] {
+  border:1px solid #f9f68a;
+  background-color: #fffed0;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#fffed0), to(#efed42));
+  background-image: -webkit-linear-gradient(top, #fffed0, #efed42);
+  background-image: -moz-linear-gradient(top, #fffed0, #efed42);
+  background-image: -ms-linear-gradient(top, #fffed0, #efed42);
+  background-image: -o-linear-gradient(top, #fffed0, #efed42);
+  background-image: linear-gradient(to bottom, #fffed0, #efed42);
+  filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#fffed0, endColorstr=#efed42);
+}
+
+input.form-submit[value="Apply"]:hover,
+.ief-entity-operations input.form-submit[value="Edit"]:hover {
+  border:1px solid #f9f68a;
+  background-color: #efed42;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#efed42), to(#fffed0));
+  background-image: -webkit-linear-gradient(top, #efed42, #fffed0);
+  background-image: -moz-linear-gradient(top, #efed42, #fffed0);
+  background-image: -ms-linear-gradient(top, #efed42, #fffed0);
+  background-image: -o-linear-gradient(top, #efed42, #fffed0);
+  background-image: linear-gradient(to bottom, #efed42, #fffed0);
+  filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#efed42, endColorstr=#fffed0);
+}
+
+input.form-submit[value="Reset"],
+.ief-entity-operations input.form-submit[value="Remove"] {
+  border:1px solid #ff6262;
+  background-color: #ffa0a0;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#ffbbbb), to(#ffa0a0));
+  background-image: -webkit-linear-gradient(top, #ffbbbb, #ffa0a0);
+  background-image: -moz-linear-gradient(top, #ffbbbb, #ffa0a0);
+  background-image: -ms-linear-gradient(top, #ffbbbb, #ffa0a0);
+  background-image: -o-linear-gradient(top, #ffbbbb, #ffa0a0);
+  background-image: linear-gradient(to bottom, #ffeeee, #ffa0a0);
+  filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#ffbbbb, endColorstr=#ffa0a0);
+}
+
+input.form-submit[value="Reset"]:hover,
+.ief-entity-operations input.form-submit[value="Remove"]:hover {
+  border:1px solid #ff6262;
+  background-color: #ffbbbb;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#ffa0a0), to(#ffbbbb));
+  background-image: -webkit-linear-gradient(top, #ffa0a0, #ffbbbb);
+  background-image: -moz-linear-gradient(top, #ffa0a0, #ffbbbb);
+  background-image: -ms-linear-gradient(top,, #ffa0a0 #ffbbbb);
+  background-image: -o-linear-gradient(top, #ffa0a0, #ffbbbb);
+  background-image: linear-gradient(to bottom, #ffa0a0, #ffbbbb);
+  filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#ffa0a0, endColorstr=#ffbbbb);
+}
+
+.node-weekly-report .field-name-field-program-served .field-item.odd .node-program {
+  background-color: #eeeeff;
+}
+
+.node-weekly-report .field-name-field-individual-hours {
+  width: 100%;
+}
+
+.node-weekly-report .node-individual .content .field {
+  width: 24.5%;
+}
+
+.field-name-field-topics-covered {
+  float: none !important;
+}
+
+.field-name-field-outreach-hours {
+  margin-right: 2em;
+}
+
+.node-weekly-report .field-name-field-program-served .node-program .field-item.even .node-individual {
+  background-color: #ffffdd;
+}
+
+.node-weekly-report .field-name-field-individual-hours .node-individual  {
+  border-top: 1px solid #6666cc;
+}
+
+.node-weekly-report .field-name-field-program-served .node-program .content .field,
+.node-weekly-report .field-name-field-individual-hours .field {
+  float: left;
+}
+
+.node-weekly-report fieldset.group-non-ta-work {
+  background-color: #ffddff;
+  margin: 0 0 0 0 !important;
+  /*padding: 0 1em 1em 0 !important;*/
+  /*top: 0 !important;*/
+}
+/* */
+.node-weekly-report .group-non-ta-work {
+  padding-bottom: 1em !important;
+}
+
+.node-weekly-report .group-non-ta-work .field {
+  width: 100%;
+}
+
+.node-weekly-report .group-non-ta-work .field .field-label {
+  width: 70%;
+}
+
+.front.one-sidebar  #content {
+  width: 620px !important;
+}
+
+.front #sidebar-second {
+  width: 400px;
+}
+
+.front .sidebar .block {
+  background-color: #ffffff;
+  border-color: #217adf;
+  border-radius: 6px;
+}
+
+#weekly-report-node-form #edit-field-program-served  .form-item-field-program-served-und-entities-0-form-status,
+#weekly-report-node-form #edit-field-program-served #edit-field-program-served-und-entities-0-form-field-whos-involved {
+  display: none;
+}
+
+#weekly-report-node-form .ief-row-entity td.inline-entity-form-node-field_whos_involved {
+  display: normal;
+}

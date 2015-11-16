@@ -1,0 +1,179 @@
+
+/**
+ * Generic elements.
+ */
+
+@font-face {
+    font-family: 'akzidenzgroteskregular';
+    src: url('../bartik/css/akzidenz-grotesk-bold-webfont.eot');
+    src: url('../bartik/css/akzidenz-grotesk-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../bartik/css/akzidenz-grotesk-bold-webfont.woff') format('woff'),
+         url('../bartik/css/akzidenz-grotesk-bold-webfont.ttf') format('truetype'),
+         url('../bartik/css/akzidenz-grotesk-bold-webfont.svg#akzidenzgroteskregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+} 
+
+table.masstapp-checkbox-table {
+	width: 750px;
+}
+
+.masstapp-checkbox-table input[type="text"] {
+	clear: both;
+	width: 125px; 
+	margin-left: 5px;
+}
+
+.masstapp-checkbox-table th.thisweek {
+	width: 200px;
+}
+
+.field .field-label {
+	font-family: 'akzidenzgroteskregular',arial,sans-serif;
+	font-weight: 100;
+}
+ 
+#edit-field-who-provided-services {
+	clear: both;
+}
+
+#edit-field-who-provided-services-und div.form-type-checkbox {
+	display: inline;
+	padding: 5px;
+}
+
+#field-date-add-more-wrapper fieldset {
+    border:0;
+    padding:0;
+    margin: -10px 0 -25px -25px;    
+}
+
+#field-date-add-more-wrapper fieldset legend {
+    display: none;
+}
+
+#node_weekly_report_form_group_weekly_topics div.field-type-number-integer, #node_weekly_report_form_group_weekly_spf .form-type-textfield, #node_weekly_report_form_group_in_person_remote div.field-type-number-integer {
+	padding: 0 10px;
+	width: 38%;
+}
+
+.view-my-programs .views-row {
+	float: left;
+        padding: 15px;
+        margin-right: 10px;
+        background: #0062A0;
+        color: #fefefe;
+        text-align: center;
+        border-radius: 5px;
+}
+
+.view-my-programs .views-row a {
+    color: #fff;    
+}
+.view-my-programs .views-field-title {
+    font-family: 'akzidenzgroteskregular',arial,sans-serif;   
+}
+.view-my-programs .views-field-nothing {
+    margin: auto;
+    margin-top: 10px;
+}
+.view-my-programs .views-field-nothing a {
+    background: #018FE2;
+    border-color: #000000;
+    border-radius: 4px 4px 4px 4px;
+    border-style: solid;
+    border-width: 1px;
+    font-family: 'akzidenzgroteskregular',arial,sans-serif;
+    padding: 5px 15px;
+    text-align: center;
+    width: 100px;
+    color: #fff;
+    font-size: 1.1em;
+}
+.view-my-programs .views-field-nothing a:hover {
+    background: #23aeff;
+    text-decoration: none;
+}
+
+#edit-field-other-people {
+    margin-top: 20px;
+}
+
+a.ctools-use-modal {
+    padding: 2px 4px;
+    background: #018FE2;
+    border-radius: 4px;
+    border: 1px solid #000;
+    color: #fff;
+    text-decoration: none;
+    margin-top: -5px;
+    margin-bottom: 15px;
+    font-family: 'akzidenzgroteskregular',arial,sans-serif;
+     font-size: 1.1em;
+}
+
+a.ctools-use-modal:hover {
+    background: #23aeff;
+}
+
+#wysiwyg-toggle-edit-field-emerging-issues-und-0-value {
+    display: none;
+}
+
+#edit-field-program-ref {
+    margin-top: -10px;
+}
+
+#field-who-was-present-add-more-wrapper {
+    padding: 0;
+}
+
+.tabledrag-toggle-weight-wrapper {
+    display: none;
+}
+
+/* #field-who-was-present-values th, #field-who-was-present-values tr, table#field-who-was-present-values {
+    background: none;
+    border: 0;
+    padding: 0;
+} */
+
+/* Events */
+
+#edit-field-total-num-people {
+	margin-top: 25px;
+}
+
+#edit-field-type-of-event {
+	margin-bottom: 15px;
+}
+
+#edit-field-type-of-event div.form-type-checkbox {
+	display:inline;
+	padding-right: 30px;
+}
+
+fieldset#node_event_form_group_topics, fieldset#node_event_form_group_spf_step {
+	border: 0;
+}
+
+#edit-field-ta-description, #edit-field-emerging-issues {
+margin-top: 20px;
+}
+
+#node_event_form_group_topics div.fieldset-wrapper div, #node_event_form_group_spf_step div.fieldset-wrapper div {
+	/*width: 38%;*/
+	/*float: left;*/
+}
+
+#node_event_form_group_topics div.fieldset-wrapper div .form-item label, #node_event_form_group_spf_step div.fieldset-wrapper div .form-item label {
+	width: 250px;
+}
+
+#field-peeps-or-progs-values label {
+	padding-left: 10px;
+	display: inline;
+}
+
+div.vertical-tabs {display: none}
