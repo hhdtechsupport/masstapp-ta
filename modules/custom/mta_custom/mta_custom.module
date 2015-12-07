@@ -61,17 +61,22 @@ function mta_custom_form_alter(&$form, &$form_state, $form_id) {
 
       // Change the "add new ta record" button.
       $form['field_program_served'][LANGUAGE_NONE]['actions']['ief_add']['#value'] = t('Add TA Record');
+
+      // Let them muck with the published option.
+      if (!user_access('administer nodes')) {
+        $form['options']['#access'] = TRUE;
+        $form['options']['promote']['#access'] = FALSE;
+        $form['options']['sticky']['#access'] = FALSE;
+      }
       break;
 
     case 'individual_node_form':
-      dpm($form, $form_id);
+//      dpm($form, $form_id);
       break;
 
     case 'program_node_form';
       $form['field_whos_involved']['#access'] = FALSE;
-
       break;
-
   }
 }
 
