@@ -24,6 +24,11 @@ h1, h2, h3, h4, h5 {
   padding: 0px;
 }
 
+/* Nancy */
+.views-exposed-widgets  .form-group {
+  border: 1px dotted red;
+  width: 180px;
+}
 
 @media screen and (min-width: 768px) {
   .navbar.container > .container {
@@ -51,8 +56,6 @@ h1, h2, h3, h4, h5 {
     width: 100% !important;
   }
 }
-
-
 
 .navbar-default {
   background: none;
@@ -82,16 +85,10 @@ h1, h2, h3, h4, h5 {
   line-height: 10px;
 }
 
-
-
 .main-container {
   margin-top: 20px;
   min-height: 300px;
 }
-
-
-
-
 
 .footer #block-block-2 p:nth-of-type(1) {
   float: left;
@@ -107,9 +104,6 @@ h1, h2, h3, h4, h5 {
   margin-top: 2px;
   font-size: .75em;
 }
-
-
-
 
 div.horizontal-tabs {
   border-radius: 4px;
@@ -128,8 +122,6 @@ div.horizontal-tabs ul.horizontal-tabs-list {
 .horizontal-tabs-list li:nth-of-type(2) {
 
 }
-
-
 
 .horizontal-tabs-panes {
   border: 1px solid #CCC;
@@ -208,10 +200,6 @@ div.horizontal-tabs ul.horizontal-tabs-list {
 }
 
 
-
-
-
-
 .form-control.form-select {
   height: auto;
   padding: 0px;
@@ -244,9 +232,6 @@ div.horizontal-tabs ul.horizontal-tabs-list {
 .chosen-container-multi .chosen-choices li.search-choice .search-choice-close {
   top: 6px;
 }
-
-
-
 
 
 /* TEMPORARY - rendering the entity automatically links the title to the node */
@@ -283,7 +268,6 @@ div.horizontal-tabs ul.horizontal-tabs-list {
   width: 40%;
 }
 
-
 .help-block span span {
   display: block;
   padding-bottom: 3px;
@@ -305,8 +289,6 @@ div.horizontal-tabs ul.horizontal-tabs-list {
   margin-top: 40px;
   margin-right: 10px;
 }
-
-
 
 
 body:not(.role-administrator) .field-name-field-whos-involved {
