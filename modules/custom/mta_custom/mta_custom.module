@@ -78,6 +78,7 @@ function mta_custom_form_alter(&$form, &$form_state, $form_id) {
       $form['field_whos_involved']['#access'] = FALSE;
       break;
   }
+
 }
 
 /**
@@ -133,6 +134,10 @@ function mta_custom_inline_entity_form_entity_form_alter(&$entity_form, &$form_s
       case 'individual':
         // Change the button texts.
         $entity_form['actions']['ief_add_save']['#value'] = t('Add TA provider/consultant');
+
+        // Set the default TA provider to be the current user.
+        global $user;
+        $entity_form['field_individual'][LANGUAGE_NONE]['#default_value'] = (string)$user->uid;
         break;
     }
   }
