@@ -723,6 +723,7 @@ function inline_entity_form_field_widget_form(&$form, &$form_state, $field, $ins
               $bundles[$bundle_name] = $bundle_info['label'];
             }
           }
+          asort($bundles);
 
           $element['actions']['bundle'] = array(
             '#type' => 'select',
@@ -1152,7 +1153,7 @@ function inline_entity_form_reference_form_validate(&$reference_form, &$form_sta
     foreach ($form_state['inline_entity_form'][$ief_id]['entities'] as $key => $value) {
       if ($value['entity'] == $attach_entity) {
         form_set_error($parents_path . '][existing_entity', t('The selected @label has already been added.', array('@label' => $labels['singular'])));
-        unset($attach_entity);
+        break;
       }
     }
   }
@@ -1740,7 +1741,7 @@ function theme_inline_entity_form_entity_table($variables) {
         }
         $data = drupal_render($renderable_data);
       }
-      elseif ($field['type'] == 'callback' && isset($field['render_callback']) && function_exists($field['render_callback'])) {
+      elseif ($field['type'] == 'callback' && isset($field['render_callback']) && is_callable($field['render_callback'])) {
         $data = call_user_func($field['render_callback'], $entity_type, $entity);
       }
 
