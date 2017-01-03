@@ -23,6 +23,24 @@ function mta_custom_menu() {
 }
 
 /**
+ * Implements hook_admin_paths_alter().
+ */
+function mta_custom_admin_paths_alter(&$paths) {
+  $paths['admin/config/administration/mta_custom'] = FALSE;
+}
+
+/**
+ * Helper function.
+ */
+function _mta_custom_map_dates($date) {
+  static $format;
+  if (!isset($format)) {
+    $format = variable_get('mta_custom_report_date_format', 'simple');
+  }
+  return format_date($date, $format);
+}
+
+/**
  * Implements hook_form_alter().
  */
 function mta_custom_form_alter(&$form, &$form_state, $form_id) {
@@ -30,21 +48,31 @@ function mta_custom_form_alter(&$form, &$form_state, $form_id) {
 //  dpm($form, $form_id);
   switch ($form_id) {
     case 'weekly_report_node_form';
+      $format = variable_get('mta_custom_report_date_format', 'simple');
       $day_of_week = variable_get('mta_custom_report_day', 'Friday');
       // This returns the next xxx day on or after today.
       $this_week = strtotime($day_of_week);
 
       $how_many = variable_get('mta_custom_list_dates', 33);
+      // Field_week is text and cannot be sorted properly.
+      $query = "SELECT DISTINCT field_week_date_value, field_week_date_value FROM field_data_field_week_date "
+        . "ORDER BY field_week_date_value DESC ";
+      $dates = db_query($query)->fetchAllKeyed();
+      $dates = array_map('_mta_custom_map_dates', $dates);
 
-      $format = 'simple';
-      $date = $this_week;
-      $dates = array();
-      for ($i = 0; $i < $how_many; ++$i) {
-        $d = format_date($date, $format);
-        $dates[$d] = $d;
-        // Note there is a hiccup on Daylight Time changes.
-        $date -= 604800;    // One week.
+      // Calculate dates not yet in the database.
+      $new_dates = array();
+      // Get the last date in the database.
+      $last_date = key($dates);
+
+      $i = $this_week;
+      while ($i > $last_date) {
+        $new_dates[$i] = format_date($i, $format);
+        $i -= 604800;
       }
+      // Stick the new dates on the front.
+      $dates = $new_dates + $dates;
+      $dates = drupal_map_assoc($dates);
 
       // Change it to a select field.
       $form['field_week'][LANGUAGE_NONE][0]['value']['#type'] = 'select';
@@ -234,16 +262,17 @@ function mta_custom_admin_settings($form, $form_state) {
     '#description' => t('This is the day of the week upon which Weekly Reports are submitted.'),
     );
 
-  $weeks = range(1, 200, 4);
-  $weeks = array_combine($weeks, $weeks);
-  $form['mta_custom_list_dates'] = array(
-    '#title' => t('How many weeks back to offer'),
+  $date_types = array();
+  foreach (system_get_date_types() as $name => $info) {
+    $date_types[$name] = $info['title'] . ' <small>(' . format_date(REQUEST_TIME, $name) . ')</small>';
+  }
+  $form['mta_custom_report_date_format'] = array(
     '#type' => 'radios',
-    '#options' => $weeks,
-    '#required' => TRUE,
-    '#default_value' => variable_get('mta_custom_list_dates', 33),
-    '#description' => t('This is how many weeks to show in the date list for Weekly Reports.'),
-    '#attributes' => array('class' => array('container-inline')),
+    '#options' => $date_types,
+    '#title' => t('Date format'),
+    '#default_value' => variable_get('mta_custom_report_date_format', 'simple'),
+    '#description' => t('This format will be used in the weekly date list.')
+      . ' ' . t('Be careful in changing this as it may result in misplaced reports.'),
     );
 
   return system_settings_form($form);
