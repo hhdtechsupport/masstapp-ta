@@ -66,7 +66,8 @@ function mta_custom_form_alter(&$form, &$form_state, $form_id) {
       $last_date = key($dates);
 
       $i = $this_week;
-      while ($i > $last_date) {
+      // Get new dates, filling in missing dates from last month.
+      while ($i > $last_date - 2592000) {
         $new_dates[$i] = format_date($i, $format);
         $i -= 604800;
       }

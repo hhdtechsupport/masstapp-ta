@@ -24,10 +24,22 @@ h1, h2, h3, h4, h5 {
   padding: 0px;
 }
 
-/* Nancy */
-.views-exposed-widgets  .form-group {
+/* Nancy
+.views-exposed-widgets .form-group {
   border: 1px dotted red;
   width: 180px;
+} /* */
+
+.views-exposed-widgets  #edit-field-week-date-value-wrapper label {
+  display: none;
+}
+
+.views-exposed-widgets  #edit-field-week-date-value-wrapper .views-widget label {
+  display: block;
+}
+
+.views-exposed-widgets  #edit-field-week-date-value-wrapper .views-widget div {
+  float: left;
 }
 
 @media screen and (min-width: 768px) {
@@ -209,6 +221,7 @@ div.horizontal-tabs ul.horizontal-tabs-list {
 }
 
 .chosen-container-single {
+  min-width: 200px;
   width: 100% !important;
 }
 

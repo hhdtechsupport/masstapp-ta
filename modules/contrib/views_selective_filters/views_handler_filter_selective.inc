@@ -291,6 +291,10 @@ class views_handler_filter_selective extends views_handler_filter_in_operator {
       unset($display->display_options['exposed_form']);
       unset($display_default->display_options['exposed_form']);
 
+      // Also disable attachments.
+      $display->handler->definition['accept attachments'] = FALSE;
+      $display_default->handler->definition['accept attachments'] = FALSE;
+
       // If we are using fields from default or current display.
       if (isset($display->display_options['fields'])) {
         $display_options_fields = &$display->display_options['fields'];

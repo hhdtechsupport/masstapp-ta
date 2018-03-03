@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the weekly_reports feature.
+ */
+
+include_once 'weekly_reports.features.inc';
